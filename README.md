@@ -287,4 +287,4 @@ end
 
 Copyright (c) 2018, Ian Luites.
 
-WithRetry code is licensed under the [MIT License](LICENSE).
+WithRetry code is licensed under the [MIT License](LICENSE.md).
