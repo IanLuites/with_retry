@@ -62,7 +62,8 @@ defmodule WithRetry.MixProject do
   defp deps do
     [
       # Dev / Test
-      {:analyze, "~> 0.1.2-rc.3", only: [:dev, :test], runtime: false}
+      {:analyze, "~> 0.1.4", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0.0-rc.6", optional: true, runtime: false, only: :dev}
     ]
   end
 end
