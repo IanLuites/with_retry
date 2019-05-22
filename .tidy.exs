@@ -1,8 +1,8 @@
 %{
   checks: [
     {Tidy.Checks.DescribeOptions, [level: :warning, args: [:opts, :options]]},
-    {Tidy.Checks.FunctionArgumentDocumentation,
-     [level: :warning, exceptions: ["opts", "options"]]},
+    # {Tidy.Checks.FunctionArgumentDocumentation,
+    #  [level: :warning, exceptions: ["opts", "options"]]},
     {Tidy.Checks.FunctionDoc, [level: :error]},
     {Tidy.Checks.FunctionExamples, [level: :suggest]},
     {Tidy.Checks.FunctionSpec, [level: :error]},
