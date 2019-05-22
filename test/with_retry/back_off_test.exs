@@ -2,8 +2,6 @@ defmodule WithRetry.BackOffTest do
   use ExUnit.Case, async: true
   use WithRetry
 
-  defp reverse_increasing_sum(sum), do: trunc(:math.sqrt(2 * sum))
-
   describe "constant/1" do
     test "returns 1_000 endlessly (default)" do
       check = Enum.random(1..100)
@@ -137,8 +135,7 @@ defmodule WithRetry.BackOffTest do
     test "limits given back off" do
       check = Enum.random(3..10)
 
-      assert Enum.to_list(limit_wait(linear(1, 1), check)) ==
-               Enum.to_list(1..reverse_increasing_sum(check))
+      assert Enum.sum(limit_wait(linear(1, 1), check)) <= check
     end
   end
 end
