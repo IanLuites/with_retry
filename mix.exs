@@ -6,7 +6,7 @@ defmodule WithRetry.MixProject do
       app: :with_retry,
       description:
         "Additional `with_retry` code block used for writing with statements that have retry logic.",
-      version: "0.0.1",
+      version: "1.0.0",
       elixir: "~> 1.7",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,

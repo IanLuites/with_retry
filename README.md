@@ -19,7 +19,7 @@ Edit `mix.exs` and add `with_retry` to your list of dependencies and application
 
 ```elixir
 def deps do
-  [{:with_retry, "~> 0.0.1"}]
+  [{:with_retry, "~> 1.0"}]
 end
 ```
 
@@ -282,6 +282,12 @@ with_retry {:ok, %{body: data}} <- HTTPX.get(url),
   data
 end
 ```
+
+## Changelog
+
+### v1.0
+
+- Fix dialyzer issue.
 
 ## Copyright and License
 
