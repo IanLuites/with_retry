@@ -75,7 +75,7 @@ defmodule WithRetry do
 
     back_off =
       if Keyword.has_key?(opts, :back_off),
-        do: opts[:back_off],
+        do: opts[:back_off] || [],
         else: quote(do: max_try(5))
 
     quote do
@@ -87,7 +87,7 @@ defmodule WithRetry do
             failed -> {:failed, failed}
           end
         end,
-        unquote(back_off) || [],
+        unquote(back_off),
         else: unquote(create_case_call(opts[:else])),
         rescue: unquote(create_case_call(opts[:rescue])),
         catch: unquote(create_case_call(opts[:catch]))
